@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import AdminLogin from "./pages/AdminLogin"
+import HalongBay from "./pages/HaLongBay"
 import "./App.css"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin-login" element={<AdminLogin />} />
+            <Route path="/destinations/halong-bay" element={<HalongBay />} />
           </Routes>
         </main>
         <Footer />

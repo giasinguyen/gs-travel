@@ -267,13 +267,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="office-image-container">
-                <img
-                  src="./assets/Ha-Long-bay.jpg"
-                  alt="Văn phòng của chúng tôi"
-                  className="office-image"
-                />
-              </div>
+              
             </div>
           </div>
         </div>

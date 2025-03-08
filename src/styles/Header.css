@@ -1,0 +1,121 @@
+.header {
+    background: linear-gradient(to right, #3b82f6, #7c3aed);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .desktop-nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #fde68a;
+  }
+  
+  .admin-button {
+    background-color: #eab308;
+    color: #1e3a8a;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-button:hover {
+    background-color: #d97706;
+  }
+  
+  .mobile-nav {
+    display: none;
+    background-color: #2563eb;
+    padding: 0.5rem 0;
+  }
+  
+  .mobile-nav-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  
+  .mobile-nav-link:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .mobile-admin-button {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    background-color: #eab308;
+    color: #1e3a8a;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+  
+    .mobile-menu-button {
+      display: block;
+    }
+  
+    .mobile-nav {
+      display: block;
+    }
+  }
+  
+  

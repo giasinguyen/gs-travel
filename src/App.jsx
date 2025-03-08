@@ -5,7 +5,7 @@ import Home from "./pages/Home"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import AdminLogin from "./pages/AdminLogin"
-import HalongBay from "./pages/HaLongBay"
+import HalongBay from "./pages/destinations/HaLongBay"
 import "./App.css"
 
 function App() {

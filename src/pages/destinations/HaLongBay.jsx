@@ -1,11 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import "../styles/DestinationDetail.css"
-import HaLong from './assets/Ha-Long-bay.jpg'
+import "./styles/DestinationDetail.css"
+import HaLong from '../assets/Ha-Long-bay.jpg'
 import { Link } from "react-router-dom"
-import BaiTamTiTop from './assets/Bai-tam-Titop.jpg'
-import LangChaiCuaVan from './assets/lang-chai-cua-van.jpg'
+import BaiTamTiTop from '../assets/Bai-tam-Titop.jpg'
+import LangChaiCuaVan from '../assets/lang-chai-cua-van.jpg'
 
 const HalongBay = () => {
   const [activeTab, setActiveTab] = useState('overview')

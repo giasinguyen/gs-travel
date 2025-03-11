@@ -1,0 +1,411 @@
+:root {
+    --profile-primary-color: #1e88e5;
+    --profile-primary-dark: #1565c0;
+    --profile-accent-color: #ff9800;
+    --profile-text-primary: #111827;
+    --profile-text-secondary: #4b5563;
+    --profile-text-muted: #6b7280;
+    --profile-border-color: #e5e7eb;
+    --profile-bg-light: #f9fafb;
+    --profile-success: #2e7d32;
+    --profile-danger: #d32f2f;
+  }
+  
+  /* Container chính */
+  .profile-page {
+    padding: 40px 0;
+  }
+  
+  .profile-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* Header */
+  .profile-header {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .profile-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--profile-text-primary);
+    margin-bottom: 8px;
+  }
+  
+  .profile-subtitle {
+    color: var(--profile-text-secondary);
+    font-size: 16px;
+  }
+  
+  /* Form chính */
+  .profile-form {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .profile-main {
+    display: flex;
+    gap: 40px;
+    padding: 32px;
+  }
+  
+  /* Phần avatar */
+  .profile-avatar-section {
+    flex-shrink: 0;
+  }
+  
+  .profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-avatar.editable {
+    cursor: pointer;
+  }
+  
+  .profile-avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--profile-primary-color);
+    color: white;
+    font-size: 64px;
+    font-weight: 600;
+  }
+  
+  .profile-avatar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .profile-avatar.editable:hover .profile-avatar-overlay {
+    opacity: 1;
+  }
+  
+  .hidden-file-input {
+    display: none;
+  }
+  
+  .profile-actions-mobile {
+    display: none;
+    margin-top: 16px;
+  }
+  
+  /* Phần chi tiết profile */
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-section {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--profile-border-color);
+  }
+  
+  .profile-section:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .profile-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--profile-text-primary);
+  }
+  
+  .section-description {
+    color: var(--profile-text-secondary);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  /* Form groups */
+  .form-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 16px;
+  }
+  
+  .form-group.full-width {
+    width: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--profile-text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--profile-border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--profile-primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.2);
+  }
+  
+  .form-group input:disabled,
+  .form-group textarea:disabled {
+    background-color: var(--profile-bg-light);
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+  
+  /* Toggle switches */
+  .toggle-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  
+  .toggle-label {
+    font-size: 16px;
+    color: var(--profile-text-primary);
+  }
+  
+  .toggle-control {
+    position: relative;
+  }
+  
+  .toggle-control input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-switch {
+    display: block;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #ccc;
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+  
+  .toggle-switch:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    background-color: white;
+    transition: transform 0.2s ease;
+  }
+  
+  .toggle-control input:checked + .toggle-switch {
+    background-color: var(--profile-primary-color);
+  }
+  
+  .toggle-control input:checked + .toggle-switch:before {
+    transform: translateX(20px);
+  }
+  
+  .toggle-control input:disabled + .toggle-switch {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Travel preferences */
+  .travel-preferences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .preference-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--profile-border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+  
+  .preference-checkbox input {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .preference-checkbox.checked {
+    background-color: var(--profile-primary-color);
+    color: white;
+    border-color: var(--profile-primary-color);
+  }
+  
+  .preference-checkbox:hover:not(.checked) {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Action buttons */
+  .profile-actions {
+    padding: 16px 32px 32px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .form-action-buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .edit-button,
+  .save-button,
+  .cancel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+  
+  .edit-button {
+    background-color: white;
+    color: var(--profile-primary-color);
+    border: 1px solid var(--profile-primary-color);
+  }
+  
+  .edit-button:hover {
+    background-color: rgba(30, 136, 229, 0.08);
+  }
+  
+  .save-button {
+    background-color: var(--profile-primary-color);
+    color: white;
+  }
+  
+  .save-button:hover {
+    background-color: var(--profile-primary-dark);
+  }
+  
+  .cancel-button {
+    background-color: transparent;
+    color: var(--profile-text-secondary);
+  }
+  
+  .cancel-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .action-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .profile-main {
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px;
+    }
+    
+    .profile-avatar-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .profile-avatar-fallback {
+      font-size: 48px;
+    }
+    
+    .profile-actions-mobile {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .profile-actions {
+      display: none;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-container {
+      padding: 0 16px;
+    }
+    
+    .profile-form {
+      border-radius: 0;
+      box-shadow: none;
+      border: 1px solid var(--profile-border-color);
+    }
+    
+    .travel-preferences {
+      gap: 8px;
+    }
+    
+    .preference-checkbox {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
